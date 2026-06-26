@@ -1,0 +1,333 @@
+.DependencyListPage {
+  margin-top: 24px;
+
+  .DependencyCollectorToolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .DependencyCollectorToolbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    min-width: 0;
+    min-height: 36px;
+    padding: 8px 13px;
+    line-height: 20px;
+    white-space: nowrap;
+
+    .Button-icon {
+      margin-right: 0;
+      line-height: 1;
+    }
+
+    &.active {
+      color: var(--button-primary-color);
+      background: var(--primary-color);
+    }
+  }
+
+  .DependencyCollectorSearch {
+    flex: 1 1 260px;
+    max-width: 360px;
+    margin-left: auto;
+  }
+
+  .DependencyCollectorSearch-input {
+    width: 100%;
+    min-height: 36px;
+  }
+
+  .DependencyCollectorTags {
+    margin-bottom: 22px;
+  }
+
+  .DependencyListTags {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    li {
+      box-sizing: border-box;
+    }
+
+    a,
+    .TagLink-name {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+
+      &:hover {
+        color: @primary-color;
+      }
+    }
+
+    .item-allDiscussions {
+      display: inline-flex;
+      align-items: center;
+      margin: 0;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      white-space: nowrap;
+      line-height: 20px;
+      padding: 0 10px;
+      border-radius: 4px;
+      -webkit-user-select: none;
+      user-select: none;
+      color: var(--button-color);
+      background: var(--button-bg);
+      border: 0;
+
+      &.active a {
+        font-weight: bold;
+        color: @primary-color;
+      }
+
+      .TagLink-icon {
+        margin-right: 5px;
+        display: none;
+      }
+    }
+  }
+
+  .DependencyCollectorContent {
+    min-width: 0;
+  }
+
+  .DependencyList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .DependencyList-empty {
+    color: var(--muted-color);
+  }
+
+  .DependencyList-loadMore {
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  @media (max-width: 767.98px) {
+    margin-top: 16px;
+
+    .DependencyCollectorToolbar {
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .DependencyCollectorToolbar-button {
+      min-height: 34px;
+      padding: 7px 10px;
+    }
+
+    .DependencyCollectorSearch {
+      flex-basis: 100%;
+      max-width: none;
+      margin-left: 0;
+    }
+
+    .DependencyCollectorSearch-input {
+      min-height: 34px;
+    }
+
+    .DependencyListTags {
+      gap: 6px;
+
+      .item-allDiscussions {
+        padding: 0 9px;
+      }
+    }
+
+    .DependencyList {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+  }
+}
+
+.DependencyItemCard {
+  border-radius: 4px;
+  padding: 15px;
+  background-color: var(--hero-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--pending {
+    opacity: 0.7;
+    border-left: 3px solid var(--alert-bg);
+    ; // Example for pending
+  }
+
+  .DependencyItemCard-statusBadge {
+    background-color: var(--alert-bg);
+    ;
+    color: var(--text-color);
+    padding: 2px 6px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    float: right; // Or position as needed
+    margin-bottom: 5px;
+  }
+
+  .DependencyItemCard-header {
+    margin-bottom: 10px;
+
+    .DependencyItemCard-title {
+      margin: 0;
+
+      a {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--heading-color);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .DependencyItemCard-body {
+    margin-bottom: 10px;
+    flex-grow: 1;
+
+    .DependencyItemCard-description {
+      font-size: 0.9em;
+      color: var(--text-color);
+      line-height: 1.4;
+    }
+  }
+
+  .DependencyItemCard-footer {
+    font-size: 0.85em;
+    color: #777;
+
+    .DependencyItemCard-tags {
+      margin-bottom: 8px;
+
+      .DependencyItemCard-tag {
+        display: inline-block;
+        padding: 3px 8px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        font-size: 0.9em;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .DependencyItemCard-tagIcon {
+        margin-right: 3px;
+      }
+    }
+
+    .DependencyItemCard-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+      line-height: 18px;
+
+      .DependencyItemCard-submitter {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-width: 0;
+        white-space: nowrap;
+
+        .DependencyItemCard-avatar {
+          width: 18px;
+          height: 18px;
+          flex: 0 0 18px;
+          font-size: 10px;
+        }
+      }
+
+      .DependencyItemCard-actions {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+        gap: 2px;
+        margin-left: auto;
+
+        .Button--icon {
+          width: 22px;
+          height: 22px;
+          min-height: 22px;
+          padding: 0;
+          line-height: 22px;
+
+          .Button-icon {
+            font-size: 12px;
+            line-height: 1;
+            margin: 0;
+            vertical-align: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.SubmitDependencyModal,
+.EditDependencyModal {
+  .TagSelector {
+    display: flex;
+    flex-wrap: wrap; // 允许标签换行
+    gap: 8px; // 标签之间的间距
+
+    span {
+      // 默认样式 (未选中)
+      background-color: transparent;
+      color: #555; // 默认文字颜色
+      font-size: 12px;
+      padding: 5px 10px;
+      line-height: 12px;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s; // 平滑过渡
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #f5f5f5;
+        border-color: #ccc;
+      }
+
+      &.active {
+        // 选中时的样式 - 优先使用标签自定义颜色
+        // JS中通过 style 属性设置了 backgroundColor 和 color
+        border-color: transparent; // 选中时可以隐藏边框或使用背景色作为边框
+        font-weight: bold;
+
+        // 如果标签没有自定义颜色，这里的样式会被 JS 中的 style 覆盖
+        // 但可以作为备用或调整其他属性
+        // background-color: @primary-color;
+        // color: white;
+      }
+
+      .Button-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}

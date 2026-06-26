@@ -1,0 +1,83 @@
+{
+    "name": "shebaoting/flarum-dependency-collector",
+    "description": "Collects and displays information about Flarum extensions and their dependencies",
+    "version": "2.0.2",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "replace": {
+        "shebaoting/dependency-collector": "self.version"
+    },
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0.0-beta"
+    },
+    "authors": [
+        {
+            "name": "Shebaoting",
+            "email": "th9th@th9th.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shebaoting\\DependencyCollector\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Dependency Collector",
+            "category": "",
+            "icon": {
+                "name": "fas fa-cubes",
+                "color": "#fff",
+                "backgroundColor": "#2f9e63"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "backendTesting": true,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Shebaoting\\DependencyCollector\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "require-dev": {
+        "flarum/testing": "^2.0.0-beta"
+    }
+}
