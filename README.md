@@ -2,13 +2,20 @@
 
 > **Read-only archive of released versions of shebaoting/flarum-dependency-collector.** Not for installation: use [Packagist](https://packagist.org/packages/shebaoting/flarum-dependency-collector) or the [upstream repository](https://github.com/shebaoting/flarum-dependency-collector).
 
-**0** versions archived · Latest: [`2.0.2`](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v2.0.2) · License: `MIT` · Flarum: `^2.0.0-beta`
+**8** versions archived · Latest: [`2.0.2`](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v2.0.2) · License: `MIT` · Flarum: `^2.0.0-beta`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `1.0.0` | 2025-05-09 | `^1.8.0` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v1.0.0) |
+| `1.1.0` | 2025-05-09 | `^1.8.0` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v1.1.0) |
+| `1.2.0` | 2025-05-09 | `^1.8.0` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v1.2.0) |
+| `1.2.2` | 2025-05-09 | `^1.8.0` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v1.2.2) |
+| `1.2.3` | 2025-05-09 | `^1.8.0` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v1.2.3) |
+| `2.0.0` | 2026-06-26 | `^2.0.0-beta` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v2.0.0) |
+| `2.0.1` | 2026-06-26 | `^2.0.0-beta` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v2.0.1) |
+| `2.0.2` | 2026-06-26 | `^2.0.0-beta` | [Browse](https://github.com/flarchive/shebaoting-flarum-dependency-collector/tree/archive/v2.0.2) |
 
 Catalog entry: [packages/shebaoting-flarum-dependency-collector.json](https://github.com/flarchive/archive-index/blob/main/packages/shebaoting-flarum-dependency-collector.json)
 
